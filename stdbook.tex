@@ -1,12 +1,12 @@
 \documentclass[a4paper]{report}
 %\usepackage[inline]{asymptote}
 \usepackage{asymptote}
-\usepackage{csvsimple}
-\usepackage{numprint}
+%\usepackage{csvsimple}
+%\usepackage{numprint}
 \usepackage{tabularx}
 \usepackage{colortbl}
-\usepackage{spreadtab}
-\usepackage{expl3}
+%\usepackage{spreadtab}
+%\usepackage{expl3}
 \ExplSyntaxOn
 % make an internal function available to the user
 \cs_set_eq:NN \fpeval \fp_eval:n
@@ -80,7 +80,7 @@ import graph3;
 size(10cm,0);
 
 currentprojection=perspective(-30,-30,30,up=Z);
-
+   
 surface s;
 
 for(int i = 0; i < 10; ++i) {
@@ -88,9 +88,9 @@ for(int i = 0; i < 10; ++i) {
     s.append(shift(i,j,0)*scale(1,1,i+j)*unitcube);
   }
 }
-
+ 
 s.colors(palette(s.map(zpart),Rainbow()));
-draw(s,meshpen=white+thick(),nolight,render(merge=true));
+draw(s,meshpen=yellow+thick(),nolight,render(merge=true));
 
 xaxis3("$x$",Bounds,InTicks(endlabel=false,Label,2,2));
 yaxis3(YZ()*"$y$",Bounds,InTicks(beginlabel=false,Label,2,2));
@@ -104,7 +104,7 @@ URL: \textsf{www.fractales.com}
 }
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
+    
 {
 \thispagestyle{empty}
 \noindent\bf{Statadistica pata artistas}\\
@@ -964,7 +964,7 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 wwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 \end{document}
-/*
+ /*
 real[][] f(real a, real b, real c)
 {
     if (b^2-4*a*c<0) {
