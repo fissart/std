@@ -260,7 +260,7 @@ Este libro se elaboró
 		      \end{enumerate}
 		\item  Cuantitativas. Son aquellas variables que están propensos a ser medidas mediante números ya sean números enteros o reales.
 		      \begin{enumerate}
-			      \item  Discretas. Aquellas que solo son medidos mediante números enteros por ejemplo: Número de hijos número de habitaciones.
+			      \item  Discretas. Aquellas que solo son medidos mediante números enteros por ejemplo: Número de hijos y número de habitaciones.
 			      \item  Continuas. Aquellas que solo son medidos mediante números reales es decir este incluye a los números racionales e irracionales. Estatura, volumen, peso.
 		      \end{enumerate}
 	\end{enumerate}
@@ -394,7 +394,7 @@ Tenga en cuenta que $n$ es el número de datos, es decir $n=f_1+f_2+\ldots+f_r=\
 		t3[i]=t2[i]+t1[i]/2;
 		path sector=(0,0)--arc((0,0),2,t2[i],t2[i+1])--cycle;
 		transform tt1=shift(w2[i]*dir(t3[i]));
-		transform tt2=shift((2.3+w2[i])*dir(t3[i]));
+		transform tt2=shift((2.+w2[i])*dir(t3[i]));
 		fill(tt1*sector, i/n*orange+(1-i/n)*blue);
 		label(www[i],tt2*(0,0),blue);
 		}
