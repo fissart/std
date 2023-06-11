@@ -362,8 +362,8 @@ Tenga en cuenta que $n$ es el número de datos, es decir $n=f_1+f_2+\ldots+f_r=\
 		label(format( "%.1f",tabni[i]/sum(tabni)*100)+"\%",(tabwi[i],tabhi[i]),N );
 		dot((tabwi[i],tabhi[i])^^(2*tabxi[0]-tabwi[0],0));
 		}
-		draw(((3*tabxi[tabwi.length]-tabxi[tabwi.length-1])/2,0)--(tabwi[tabwi.length-1],tabhi[tabwi.length-1]),orange);             dot(((3*tabxi[tabwi.length]-tabxi[tabwi.length-1])/2,0));
-
+		draw(((3*tabxi[tabwi.length]-tabxi[tabwi.length-1])/2,0)--(tabwi[tabwi.length-1],tabhi[tabwi.length-1]),orange);        
+		dot(((3*tabxi[tabwi.length]-tabxi[tabwi.length-1])/2,0));
 		write((tabxi[tabwi.length]-tabxi[tabwi.length-1])/2);
 		histogram(tabxi,tabhi,low=0,bars=true,blue+opacity(0.5));
 		xaxis("wwwwwwww",Bottom, RightTicks(Step=3,step=1),above=true);
