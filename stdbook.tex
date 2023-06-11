@@ -380,7 +380,7 @@ Tenga en cuenta que $n$ es el número de datos, es decir $n=f_1+f_2+\ldots+f_r=\
 	\centering
 	\begin{asy}
 		size(5cm);
-		string[] www={"www","$\sum_2^3x_i$","\int_1^3f(x)dx$","w","www"};
+		string[] www={"www","$\sum_2^3x_i$","$\int_1^3f(x)dx$","w","www"};
 		real[] w1={20,30,10,10,50};
 		real[] w2={0.1,0,0.2,0,0};
 		real[] t1;
@@ -394,7 +394,7 @@ Tenga en cuenta que $n$ es el número de datos, es decir $n=f_1+f_2+\ldots+f_r=\
 		t3[i]=t2[i]+t1[i]/2;
 		path sector=(0,0)--arc((0,0),2,t2[i],t2[i+1])--cycle;
 		transform tt1=shift(w2[i]*dir(t3[i]));
-		transform tt2=shift((2.7+w2[i])*dir(t3[i]));
+		transform tt2=shift((2.+w2[i])*dir(t3[i]));
 		fill(tt1*sector, i/n*yellow+(1-i/n)*blue);
 		label(www[i],tt2*(0,0),blue);
 		}
