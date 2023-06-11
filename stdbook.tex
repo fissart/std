@@ -84,13 +84,13 @@ currentprojection=perspective(-30,-30,30,up=Z);
 surface s;
 
 for(int i = 0; i < 10; ++i) {
-  four(int j = 0; j < 10; ++j) {
+  for(int j = 0; j < 10; ++j) {
     s.append(shift(i,j,0)*scale(1,1,i+j)*unitcube);
   }
 }
  
 s.colors(palette(s.map(zpart),Rainbow()));
-draw(s,meshpen=yellow+thick(),nolight,render(merge=true));
+draw(s,meshpen=+thick(),nolight,render(merge=true));
 
 xaxis3("$x$",Bounds,InTicks(endlabel=false,Label,2,2));
 yaxis3(YZ()*"$y$",Bounds,InTicks(beginlabel=false,Label,2,2));
@@ -104,7 +104,7 @@ URL: \textsf{www.fractales.com}
 }
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
+ 
 {
 \thispagestyle{empty}
 \noindent\bf{Statadistica pata artistas}\\
