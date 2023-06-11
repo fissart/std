@@ -77,19 +77,14 @@
 		import three;
 		import palette;
 		import graph3;
-
 		size(11cm,0);
-
 		currentprojection=perspective(-30,-30,30,up=Z);
-
 		surface s;
-
 		for(int i = 0; i < 10; ++i) {
 				for(int j = 0; j < 10; ++j) {
 						s.append(shift(i,j,0)*scale(1,1,i+j)*unitcube);
 					}
 			}
-
 		s.colors(palette(s.map(zpart),Rainbow()));
 		draw(s,meshpen=orange+thick(),nolight,render(merge=true));
 
@@ -967,6 +962,7 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 \pagenumbering{roman}
 \setcounter{page}{1}
 \chapter{Sistemas de coordenadas}
+
 \end{document}
 /*
 real[][] f(real a, real b, real c)
