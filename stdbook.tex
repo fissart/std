@@ -410,7 +410,7 @@ Si se tiene $n$ clases entonces el sector circular tendra una radio de $360\cdot
 \begin{figure}[!ht]
 	\centering
 	\begin{asy}
-		size(7.5cm,0);
+		size(7.cm,0);
 		pen dashed=linetype(new real[] {5,3});
 		void bargraph(real X, real Y,
 		real ymin, real ymax, real ystep,
@@ -418,9 +418,9 @@ Si se tiene $n$ clases entonces el sector circular tendra una radio de $360\cdot
 		Label LX, Label LY, Label[] LLX,
 		real[] height,
 		pen p=nullpen){
-		draw((0,0)--(0,Y),EndArro);
-		draw((0,0)--(X,0),EndArrow);
-		label(LX,(X,0),plain.SE);
+		draw((0,0)--(0,Y));
+		draw((0,0)--(X,0));
+		label(LX,(X,0),plain.E);
 		label(LY,(0,Y),plain.N);//fontsize(9)
 		real yscale=Y/(ymax+ystep);
 		for(real y=ymin; y<ymax; y+=ystep) {
