@@ -1,6 +1,7 @@
 /*
 !.gitignore
 !latexmkrc
+!credenciales
 !stdbook.tex
 !bb.bib
 !excel
