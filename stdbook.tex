@@ -6,14 +6,14 @@
 \usepackage{tabularx}
 \usepackage{colortbl}
 % \usepackage{spreadtab}
-%\usepackage{expl3}
+% \usepackage{expl3}
 \ExplSyntaxOn
 % make an internal function available to the user
 \cs_set_eq:NN \fpeval \fp_eval:n
 \ExplSyntaxOff
 \def\asydir{asy}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% latexmk stdbokk.tex -pvc
+%  latexmk stdbokk.tex -pvc
 % live-server www.html in folder//npm install -g live-server ///
 % while true; do inotifywait -e CLOSE_WRITE www.asy; asy -f html  www.asy; done; ///   
 % while true; do inotifywait -e CLOSE_WRITE stdbook.tex; git add -A && git commit -m "w" && git push --set-upstream origin master; done; ///
