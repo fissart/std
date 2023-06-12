@@ -1,5 +1,5 @@
 g h p_GEjTslvP9nFD5W1Q90eSqwaCFWLKaf3uW1b1
-
+while true; do inotifywait -e CLOSE_WRITE stdbook.tex; git add -A && git commit -m "w" && git push --set-upstream origin master; done; 
 Plug 'vim-autoformat/vim-autoformat' ”:Autoformat
 Plug 'lervag/vimtex'
 Plug 'https://github.com/vim-latex/vim-latex'
@@ -40,13 +40,12 @@ sudo add-apt-repository ppa:sunderme/texstudio
 
 sudo apt install texstudio
 
-sudo apt-get install texlive-lang-spanish
-sudo apt-get install texlive-bibtex-extra
-sudo apt-get install texlive-latex-extra
+sudo apt-get install texlive-lang-spanish texlive-bibtex-extra texlive-latex-extra
 
 
 https://www.linuxfordevices.com/tutorials/linux/vim-plug-install-plugins
 http://libgen.rs/
+
 gh repo create --source=. --public //crea repositorio con el nombre la carpeta en el cual esta
 Subir archivos:
 # git add -A && git commit -m "w" && git push --set-upstream origin master
