@@ -1,5 +1,11 @@
 g h p_GEjTslvP9nFD5W1Q90eSqwaCFWLKaf3uW1b1
+
 while true; do inotifywait -e CLOSE_WRITE stdbook.tex; git add -A && git commit -m "w" && git push --set-upstream origin master; done; 
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
 Plug 'vim-autoformat/vim-autoformat' ”:Autoformat
 Plug 'lervag/vimtex'
 Plug 'https://github.com/vim-latex/vim-latex'

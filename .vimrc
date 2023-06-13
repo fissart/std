@@ -1,11 +1,7 @@
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-"   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-" curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 call plug#begin()
 Plug 'https://github.com/neoclide/vim-jsx-improve'
 Plug 'https://github.com/907th/vim-auto-save'
 Plug 'https://github.com/latex-lsp/texlab'
-Plug 'tyru/open-browser.vim' " opens url in browser
 Plug 'tyru/open-browser.vim' " opens url in browser
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree', { 'on': 'NERDTreeToggle' }
