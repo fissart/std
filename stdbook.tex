@@ -22,7 +22,7 @@
 \usepackage[spanish]{babel}
 \usepackage[centertags]{amsmath}
 \usepackage{amsfonts}
- 
+
 \usepackage{graphicx}\usepackage{longtable}
 \usepackage{booktabs}
 %\usepackage{ulem}
@@ -53,7 +53,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}
+ \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{asydef}
 	settings.prc=false;
@@ -73,13 +73,162 @@
 	\bf{RICARDO}\\
 	\vspace{0.5cm}
 
+	\begin{asy}
+		import three;
+		import palette;
+		import graph3;
+		size(11cm,0);
+		currentprojection=perspective(-30,-30,30,up=Z);
+		surface s;
+		for(int i = 0; i < 10; ++i) {
+				for(int j = 0; j < 10; ++j) {
+						s.append(shift(i,j,0)*scale(1,1,i+j)*unitcube);
+					}
+			}
+		s.colors(palette(s.map(zpart),Rainbow()));
+		draw(s,meshpen=orange+thick(),nolight,render(merge=true));
+		xaxis3("$x$",Bounds,InTicks(endlabel=false,Label,2,2));
+		yaxis3(YZ()*"$y$",Bounds,InTicks(beginlabel=false,Label,2,2));
+		zaxis3(XZ()*"$z$",Bounds,InTicks);
+	\end{asy}
+}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[angle=0,width=1.0\textwidth]{ww}
-  \caption{}
-  \label{fig:ww}
-\end{figure}
+\vfill
+
+\noindent
+%ps://asy.marris.fr/
+Departamento de matemática y física, FIMGC-USNCH\\
+\emph{E-mail}: \texttt{ricardomallqui6@gmail.com}\\
+URL: \textsf{www.fractales.com}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+	\thispagestyle{empty}
+	\noindent\bf{Estadística en artistas}\\
+	\bf{Ricardo Michel Mallqui Baños}\\
+	\vspace{3cm}
+
+	\noindent Un libro de estadística, basado en código Asymptote y LaTeX.\\
+
+	\noindent Bibliografia.\\
+	\noindent Incluye Indice.\\
+	1. Estadística descriptiva 2. Estadística Inferencial\\
+	\vfill
+	\noindent
+	\begin{asy}
+		import graph;
+		size(0,150);
+
+		int a=-1, b=1;
+
+		real f(real x) {return x^3-x+2;}
+		real g(real x) {return x^2;}
+
+		draw(graph(f,a,b,operator ..),red);
+		draw(graph(g,a,b,operator ..),blue);
+
+		xaxis();
+
+		int n=5;
+
+		real width=(b-a)/(real) n;
+		for(int i=0; i <= n; ++i) {
+				real x=a+width*i;
+				draw((x,g(x))--(x,f(x)));
+			}
+
+		labelx("$a$",a);
+		labelx("$b$",b);
+		draw((a,0)--(a,g(a)),dashed);
+		draw((b,0)--(b,g(b)),dashed);
+
+		real m=a+0.73*(b-a);
+		arrow("$f(x)$",(m,f(m)),N,red);
+		arrow("$g(x)$",(m,g(m)),E,0.8cm,blue);
+
+		int j=2;
+		real xi=b-j*width;
+		real xp=xi+width;
+		real xm=0.5*(xi+xp);
+		pair dot=(xm,0.5*(f(xm)+g(xm)));
+		dot(dot,darkgreen+4.0);
+		arrow("$\left(x,\frac{f(x)+g(x)}{2}\right)$",dot,NE,2cm,darkgreen);
+	\end{asy}
+
+	%\noindent \texttt{\textregistered\;\textcopyright\; 2023 pa-esfa, Inc. UNSCH, Huamanga}\\
+	\noindent %\texttt{\textregistered\;\textcopyright}\\
+	\texttt{Todos los derechos reservados. Ninguna parte de esto
+		libro puede ser reproducido en cualquier forma,
+		o por cualquier medio, sin permiso
+		por escrito del editor.}\\
+	Departamento de matemática y física, FIMGC-USNCH\\
+	\emph{E-mail}: \texttt{ricardomallqui6@gmail.com}\\
+	URL: \textsf{www.fractales.com}
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\renewcommand\listfigurename{Índice general}
+\pagenumbering{roman}
+\setcounter{page}{1}
+\addcontentsline{toc}{chapter}{Índice general}
+\tableofcontents
+
+\renewcommand\listfigurename{Lista de figuras}
+\addcontentsline{toc}{chapter}{Lista de figuras}
+\listoffigures
+
+\renewcommand\listtablename{Lista de tablas}
+\addcontentsline{toc}{chapter}{Lista de tablas}
+\listoftables
+\newpage
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Presentación}
+
+Este libro se elaboró
+
+\addcontentsline{toc}{chapter}{Presentación}
+
+\underline{\underline{Double underlined text}}
+{Double underlined text}
+
+\textsl{\underline{Slanted underlined}}
+\textsc{\underline{Small caps underlined}}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%111
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Estadística descriptiva}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{Preliminares}
+		
+\section{Conceptos básicos}
+\subsection{Parámetros} 
+\begin{defn}[Poblacion]
+	A statistical population is a data set (usually large, sometimes conceptual) that is our target of interest.
+\end{defn}
+
 
 
 \begin{defn}[Poblacion]
@@ -96,7 +245,9 @@
 \end{defn}
 \begin{thm}
 	wwwwwwwwwwwwwwwww
-\end{thm}i
+\end{thm}
+
+
 \subsection{Variables estadísticas}
 
 \begin{defn}[Variables cuantitativas]
@@ -256,7 +407,7 @@ Si se tiene $n$ clases entonces el sector circular tendra una radio de $360\cdot
 
 \subsection{Diagrama de barras}
 
-Este tipo de diagramas repesentan aquellos datos cuantitativos, clasificados en clases
+Este tipo de diagramas repesentan aquellos datos cuantitativos, clasificados en clases 
 
 \begin{figure}[!ht]
 	\centering
@@ -300,8 +451,8 @@ Este tipo de diagramas repesentan aquellos datos cuantitativos, clasificados en 
 \end{figure}
 
 
-
-\begin{figure}[!ht]
+ 
+\begin{figure}[!ht] 
 	\centering
 	\begin{asy}
 		size(7cm,5cm,false);
@@ -330,7 +481,7 @@ Este tipo de diagramas repesentan aquellos datos cuantitativos, clasificados en 
 	\caption{Meadiana}
 \end{figure}
 
-
+                                 
 
 \chapter{Medidas estadísticas de variables cuantitativas}
 
@@ -368,10 +519,10 @@ Son aquellas medidas que buscan un dato representivo central de un conjunto de d
 \end{longtable}
 
 \subsection{Media o promedio}
-\begin{enumerate}
-	\item Datos no agrupados. $\overline{x}=\frac{\sum_1^nx_i}{n}$ donde $n$ es el número de datos.
-	\item Datos agrupados.  $\overline{x}=\frac{\sum_1^mf_iy_i}{n}$ donde $m<n$, $m$ número de clases y $n$ es el número de datos.
-\end{enumerate}
+	\begin{enumerate}
+		\item Datos no agrupados. $\overline{x}=\frac{\sum_1^nx_i}{n}$ donde $n$ es el número de datos.
+		\item Datos agrupados.  $\overline{x}=\frac{\sum_1^mf_iy_i}{n}$ donde $m<n$, $m$ número de clases y $n$ es el número de datos.
+ 	\end{enumerate}
 
 \subsection{Mediana}
 
@@ -734,35 +885,15 @@ La inferencia estadística es primordialmente de naturaleza
 inductiva y llega a generalizar respecto de las características de
 una población valiéndose de observaciones empíricas de la
 muestra.
-  	Hellow
-\begin{align*}
-	w&=w\\
-	 &=wwwwwwwwwwwwwwwwwwwww 
-\end{align*}
 
-\begin{thm}
-	wwwwwwwwwwwwwww
-	  
-\end{thm}
-wwwwwwwwwwwwwwwwwwwwwww
-\begin{thm}
-	w_wwwwwwwwwwwwwwwwwww
-\end{thm}
-\section{wwww}
-\begin{equation}
-	wwwwwwww
-	\label{wwwww}
-\end{equation}
-\begin{enumerate}
-	\item wwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-	\item wwwwwwwwwwwwwwwwwwwwwwww
-\end{enumerate}
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
 
 \begin{figure}[!ht]
 	\centering
 	\begin{asy}
 		import graph;
-		size(320,0);
+		size(300,0);
 		int a=0, b=2;
 		real f(real x) {return 1/(sqrt(2*pi)*(0.5))*exp(-(x-1)^2/(2*(0.5)^2));}
 		real g(real x) {return 0;}
@@ -777,22 +908,20 @@ wwwwwwwwwwwwwwwwwwwwwww
 		labelx("$a$",a);
 		labelx("$b$",b);
 		pair mid=(a+0.5*(b-a),(f(a+0.5*(b-a))+g(a+0.5*(b-a)))/2);
-		label("$90\%$",mid,black);
+		label("$90\%$",mid,white);
 		real m=a+0.5*(b-a);
 		real p=a-0.1;
 		real q=b+0.1;
 		//arrow("$f(x)$",(m,f(m)),N,red);
-		arrow("$5\%$",(p,0.5*f(p)),NW,black);
+		arrow("$5\%$",(p,0.5*f(p)),NW,orange);
 		dot((p,0.5*f(p)),orange);
-		arrow("$5\%$",(q,0.5*f(q)),NE,black);
+		arrow("$5\%$",(q,0.5*f(q)),NE,orange);
 		dot((q,0.5*f(q)),orange);
 		//arrow("$g(x)$",(m,g(m)),dir(-90),0.8cm,blue);
 	\end{asy}
 	\caption{Normal}
 \end{figure}
 
-\cite{figueiras}   \cite{modelo2} \usebibentry{modelo2}{title}
-\[wwwwwwwwwwwwwwwwwwwwwwwwwwwwwww\]
 
 
 \cite{hilbert2020geometry}. ``\usebibentry{hilbert2020geometry}{title}''  this environment shares the counter of the previously defined thm environment.
@@ -802,7 +931,8 @@ wwwwwwwwwwwwwwwwwwwwwww
 \index{www}
 \index{www!wwww}
 \index{www!wwww2}
-\index{www!www}  
+\index{www!wwww3}
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
 
 
@@ -825,7 +955,6 @@ wwwwwwwwwwwwwwwwwwwwwww
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
-
 \pagenumbering{roman}
 \setcounter{page}{1}
 \chapter{Sistemas de coordenadas}
