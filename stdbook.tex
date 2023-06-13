@@ -907,7 +907,7 @@ muestra.
 		labelx("$a$",a);
 		labelx("$b$",b);
 		pair mid=(a+0.5*(b-a),(f(a+0.5*(b-a))+g(a+0.5*(b-a)))/2);
-		label("$90\%$",mid,whit);
+		label("$90\%$",mid,black);
 		real m=a+0.5*(b-a);
 		real p=a-0.1;
 		real q=b+0.1;
@@ -916,7 +916,7 @@ muestra.
 		dot((p,0.5*f(p)),orange);
 		arrow("$5\%$",(q,0.5*f(q)),NE,black);
 		dot((q,0.5*f(q)),orange);
-		//arrow("$g(x)$",(m,g(m)),dir(-90),0.8cm,blue);
+		/arrow("$g(x)$",(m,g(m)),dir(-90),0.8cm,blue);
 	\end{asy}
 	\caption{Normal}
 \end{figure}
