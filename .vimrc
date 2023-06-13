@@ -15,7 +15,8 @@ Plug 'https://github.com/lervag/vimtex'
 Plug 'https://github.com/vim-autoformat/vim-autoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
-
+" CocInstall coc-json coc-tsserver
+" CocInstall coc-vimtex
 let g:auto_save = 1
 let g:auto_save_events = ["InsertLeave", "TextChangedI"]
 
@@ -85,7 +86,7 @@ function! ShowDocumentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor
-" autocmd CursorHold * silent call CocActionAsync('highlight')
+ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
