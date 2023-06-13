@@ -892,7 +892,7 @@ muestra.
 	\centering
 	\begin{asy}
 		import graph;
-		size(300,0);
+		size(320,0);
 		int a=0, b=2;
 		real f(real x) {return 1/(sqrt(2*pi)*(0.5))*exp(-(x-1)^2/(2*(0.5)^2));}
 		real g(real x) {return 0;}
@@ -907,14 +907,14 @@ muestra.
 		labelx("$a$",a);
 		labelx("$b$",b);
 		pair mid=(a+0.5*(b-a),(f(a+0.5*(b-a))+g(a+0.5*(b-a)))/2);
-		label("$90\%$",mid,white);
+		label("$90\%$",mid,whit);
 		real m=a+0.5*(b-a);
 		real p=a-0.1;
 		real q=b+0.1;
 		//arrow("$f(x)$",(m,f(m)),N,red);
-		arrow("$5\%$",(p,0.5*f(p)),NW,orange);
+		arrow("$5\%$",(p,0.5*f(p)),NW,black);
 		dot((p,0.5*f(p)),orange);
-		arrow("$5\%$",(q,0.5*f(q)),NE,b);
+		arrow("$5\%$",(q,0.5*f(q)),NE,black);
 		dot((q,0.5*f(q)),orange);
 		//arrow("$g(x)$",(m,g(m)),dir(-90),0.8cm,blue);
 	\end{asy}
