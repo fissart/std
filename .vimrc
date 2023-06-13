@@ -7,9 +7,9 @@ Plug 'https://github.com/907th/vim-auto-save'
 " Plug 'https://github.com/preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 " Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 " Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
-" Plug 'https://github.com/lervag/vimtex'
+Plug 'https://github.com/lervag/vimtex'
 Plug 'https://github.com/vim-autoformat/vim-autoformat'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'https://github.com/vim-latex/vim-latex'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
